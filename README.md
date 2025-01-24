@@ -1,6 +1,6 @@
 # PicoW BLE Temperature Sensor
 
-This project implements a BLE-based temperature sensor using a Raspberry Pi Pico W and MicroPython. The program reads temperature data from an SHT31 sensor via I2C and transmits the data to a PC or mobile device using Bluetooth Low Energy (BLE).
+This project (picow_ble_sht31_senser.py) implements a BLE-based temperature sensor using a Raspberry Pi Pico W and MicroPython. The program reads temperature data from an SHT31 sensor via I2C and transmits the data to a PC or mobile device using Bluetooth Low Energy (BLE).
 
 ## Features
 
