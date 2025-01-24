@@ -22,7 +22,7 @@ This project implements a BLE-based temperature sensor using a Raspberry Pi Pico
 
 1. Clone the repository to your local machine:
 
-   git clone https://github.com/yourusername/your-repository.git
+   git clone https://github.com/kuronyan-sleep/mpy_temp_senser.git
 
 2. Install MicroPython on your Raspberry Pi Pico W if not already installed. Follow the [official installation guide](https://www.raspberrypi.org/documentation/pico/getting-started/) for setting up MicroPython.
 
