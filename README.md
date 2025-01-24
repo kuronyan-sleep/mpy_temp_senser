@@ -21,29 +21,15 @@ This project implements a BLE-based temperature sensor using a Raspberry Pi Pico
 ## Installation
 
 1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/your-repository.git
- 
-申し訳ありません、再度確認して修正します。こちらが正しいマークダウン形式にした`## Installation` セクションです。
 
-```markdown
-## Installation
-
-1. Clone the repository to your local machine:
-   ```bash
    git clone https://github.com/yourusername/your-repository.git
-   ```
 
 2. Install MicroPython on your Raspberry Pi Pico W if not already installed. Follow the [official installation guide](https://www.raspberrypi.org/documentation/pico/getting-started/) for setting up MicroPython.
 
 3. Flash the program to your Pico W by uploading the script to the device.
 
 4. Connect the SHT31 temperature sensor to the I2C pins (SCL: Pin 18, SDA: Pin 19 for PicoW).
-```
 
----
-
-```markdown
 ## Usage
 
 Once the program is running on the Pico W, the device will start advertising its BLE service, and the temperature data will be sent to any connected Bluetooth-enabled device (PC, smartphone, etc.). The program will periodically send temperature updates every second.
