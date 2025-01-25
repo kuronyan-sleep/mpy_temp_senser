@@ -28,7 +28,7 @@ This project (picow_ble_sht31_senser.py) implements a BLE-based temperature sens
 
 3. Flash the program to your Pico W by uploading the script to the device.
 
-4. Connect the SHT31 temperature sensor to the I2C pins (SCL: Pin 18, SDA: Pin 19 for PicoW).
+4. Connect the SHT31 temperature sensor to the I2C pins (SCL: Pin 5, SDA: Pin 4 for PicoW).
 
 ## Usage
 
