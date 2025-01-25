@@ -34,9 +34,7 @@ _ENV_SENSE_SERVICE = (
 class BLETemperature:
     def __init__(self, ble, name=""):
         # I2C設定
-        self.i2c = I2C(0, scl=Pin(18), sda=Pin(19))
-        # PicoWのI2Cピン（SCL:5, SDA:4）
-        # WSP32のI2Cピン（SCL:18, SDA:19）
+        self.i2c = I2C(0, scl=Pin(5), sda=Pin(4))  # PicoWのI2Cピン（SCL:5, SDA:4）
         self._ble = ble
         self._ble.active(True)
         self._ble.irq(self._irq)
@@ -66,7 +64,7 @@ class BLETemperature:
     def update_temperature(self, notify=False, indicate=False):
         # 温度の取得と送信
         temp_deg_c = self._get_temp()
-        print("write temp %.2f degc" % temp_deg_c)
+        print("write temperature %.2f °C" % temp_deg_c)
         self._ble.gatts_write(self._handle, struct.pack("<h", int(temp_deg_c * 100)))  # 温度値を格納
         if notify or indicate:
             for conn_handle in self._connections:
@@ -94,12 +92,12 @@ def demo():
     ble = bluetooth.BLE()
     temp = BLETemperature(ble)
     counter = 0
-#    led = Pin('LED', Pin.OUT)
+    led = Pin('LED', Pin.OUT)
     while True:
         if counter % 10 == 0:
             temp.update_temperature(notify=True, indicate=False)
-#        led.toggle()
-        time.sleep_ms(1000)
+        led.toggle()
+        time.sleep_ms(950)
         counter += 1
 
 if __name__ == "__main__":
