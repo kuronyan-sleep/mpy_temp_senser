@@ -55,6 +55,7 @@ If you're using a smartphone, you can connect to the device and receive real-tim
 - `picow_ble_sht31_sensor.py` is based on the official Raspberry Pi Pico W sample program `picow_ble_temp_sensor.py`. It has been modified to interface with the SHT31 sensor for temperature readings via I2C.
 - `ble_advertising.py` used in this project is the official Raspberry Pi version.
 - Additionally, `picow_ble_temp_reader.py` is included as a reference, based on the official Raspberry Pi sample program.
+- The code is inspired by examples from the official Raspberry Pi Pico MicroPython repository: [https://github.com/raspberrypi/pico-micropython-examples/tree/master/bluetooth](https://github.com/raspberrypi/pico-micropython-examples/tree/master/bluetooth).
 
 ## Code Walkthrough
 
